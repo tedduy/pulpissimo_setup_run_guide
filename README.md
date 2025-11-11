@@ -76,6 +76,10 @@ This document records the steps to install and run simulations for the **PULPiss
     # ⚠️ Note: Replace $HOME/riscv if your path is different
     
     export PATH=$PULP_RISCV_GCC_TOOLCHAIN/bin:$PATH
+
+    # ⚠️ IMPORTANT NOTE:
+    # You should only export these variables temporarily for your current session.
+    # Do NOT add them to your ~/.bashrc file, as this may affect your Questasim license.
     ```
 
 3.  **Run the 'hello' example:**
@@ -89,6 +93,7 @@ This document records the steps to install and run simulations for the **PULPiss
     # Clean, build, and run
     make clean && make all && make run
     ```
+    ![Completed setup and run "Hello"](logs.png)
 
 ---
 
