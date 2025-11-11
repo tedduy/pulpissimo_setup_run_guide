@@ -84,7 +84,7 @@ This document records the steps to install and run simulations for the **PULPiss
 
 3.  **Run the 'hello' example:**
     ```bash
-    # Source the configuration file
+    # Source the configuration file to enable core
     source sw/pulp-runtime/configs/pulpissimo_cv32.sh
     
     # Go to the example directory
