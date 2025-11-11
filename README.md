@@ -17,7 +17,7 @@ This document records the steps to install and run simulations for the **PULPiss
 
 1.  **Clone the PULPissimo repository:**
     ```bash
-    git clone [https://gitlab.com/anhnt232/pulpissimo.git](https://gitlab.com/anhnt232/pulpissimo.git)
+    git clone https://gitlab.com/anhnt232/pulpissimo.git
     ```
 
 2.  **Install Bender (Package Manager):**
@@ -41,7 +41,7 @@ This document records the steps to install and run simulations for the **PULPiss
     cd ../../
     
     # Clone the examples
-    git clone [https://github.com/pulp-platform/pulp-rt-examples.git](https://github.com/pulp-platform/pulp-rt-examples.git)
+    git clone https://github.com/pulp-platform/pulp-rt-examples.git
     ```
 
 4.  **Install the RISC-V Toolchain:**
@@ -50,7 +50,7 @@ This document records the steps to install and run simulations for the **PULPiss
     cd ../
     
     # Follow the official guide at:
-    # [https://github.com/pulp-platform/riscv-gnu-toolchain](https://github.com/pulp-platform/riscv-gnu-toolchain)
+    # https://github.com/pulp-platform/riscv-gnu-toolchain
     ```
 
 ---
