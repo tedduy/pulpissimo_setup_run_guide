@@ -94,7 +94,7 @@ This document records the steps to install and run simulations for the **PULPiss
 
 ### 3. 🐞 Questasim Simulation Fixes (Error and Solution) (IF ANY)
 
-**Error 1: Library `rtl_work` not found**
+**Error: Library `rtl_work` not found**
 
 * **Error message (or similar):**
     ```
@@ -112,34 +112,3 @@ This document records the steps to install and run simulations for the **PULPiss
     set vsim_cmd "vsim -c -quiet -lib /home/buuduy/WorkSpace/Ftel/pulpissimo/build/questasim/rtl_work $TB \
     ```
     (⚠️ **Note:** Replace `/home/buuduy/WorkSpace/Ftel/pulpissimo/...` with your absolute path)
-
----
-
-**Error 2: Cannot read variable `vsim_vopt_args`**
-
-* **Error message:**
-    ```
-    # can't read "vsim_vopt_args": no such variable
-    ```
-* **Solution (File: `pulpissimo/build/questasim/tcl_files/config/vsim.tcl`):**
-    Look around **lines 73-77**. This error is caused by an `if` statement that is **missing its `else` block**, which prevents the variable from being set in all cases. You need to correct this `if-else` structure.
-
----
-
-**Error 3: Tcl error during run (related to `run_and_exit`)**
-
-* **Error message (or similar):**
-    ```
-    # Error related to 'run_and_exit' or Tcl syntax error
-    make: *** [.../default_rules.mk:320: run] Error 1
-    ```
-* **Solution (Requires fixing 2 files):**
-
-    * **a. File: `pulpissimo/build/questasim/tcl_files/config/run_and_exit.tcl`**
-        * **Fix:** Add a closing brace `}` to the very last line of the file (to close a missing code block).
-
-    * **b. File: `pulpissimo/build/questasim/tcl_files/run.tcl`**
-        * **Fix:** Add the following line to the file (just the name, no parentheses) to call the execution script:
-            ```tcl
-            run_and_exit
-            ```
